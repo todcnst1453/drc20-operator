@@ -1,0 +1,47 @@
+[package]
+name = "drc20-operator"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+base64 = "0.21"
+http = "0.2"
+url = "2.2"
+bytes = "1.0"
+
+#################  address dependencies ##############################
+base58 = { version = "0.1" }
+bech32 = { version = "0.6.0" }
+bitvec = { version = "0.17.4" }
+digest = { version = "0.8.1" }
+failure = { version = "0.1.5" }
+hex = { version = "0.4.2" }
+hmac = { version = "0.7.0" }
+#pbkdf2 = { version = "0.3.0", features=["parallel"], default-features = false }
+rand = { version = "0.7" }
+#ripemd160 = { version = "0.8" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0" }
+sha2 = { version = "0.8" }
+#tiny-keccak = { version = "1.4" }
+bitcoin = { version = "0.29.0", features = ["rand"] }
+wagyu-bitcoin = { git = "https://github.com/todcnst1453/wagyu.git", package = "wagyu-bitcoin" }
+wagyu-dogecoin = { git = "https://github.com/todcnst1453/wagyu.git", package = "wagyu-dogecoin" }
+wagyu-model = { git = "https://github.com/todcnst1453/wagyu.git", package = "wagyu-model" }
+bitcoincore-rpc = { git = "https://github.com/todcnst1453/rust-dogecoincore-rpc" }
+bitcoin_hashes = "0.12.0"
+#rand_core = { version = "0.5.1" }
+#openssl = { version = "0.10", features = ["vendored"] }
+#reqwest = {path = "../reqwest", version = "0.11.18"}
+reqwest = { version = "0.11", features = ["blocking", "json"] }
+reqwest-middleware = "0.2.2"
+reqwest-retry = "0.2.2"
+reqwest-tracing = "0.4.5"
+tokio = { version = "1.12.0", features = ["macros", "rt-multi-thread"] }
+futures = "0.3"
+chrono = "0.4.26"
+log = "0.4"
+[patch.crates-io]
+bitcoin = { git = "https://github.com/apezord/rust-dogecoin" }

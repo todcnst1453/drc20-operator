@@ -1,0 +1,18 @@
+{
+    "op": "transfer",
+    "tick": "", // drc20 token name, such as: UNIX
+    "rpc_url": "", // dogecoin node: ip_address:port
+    "username": "", // username of dogecoin node 
+    "password": "", // password of dogecoin node
+    "transactions": [
+        {
+            "utxo": "", // unspent txid of sending address
+            "vin": , // index of the unspent txid
+            "to_addr": "", // receiving address
+            "from_addr": "", // sending address
+            "wif": "", // the wif of sending address, it's private information
+            "tx_fee": , // the transfer tx_fee, strongly recommended to be greater than 0.05
+            "amt": // expected transfer amount of drc20, only 
+        }
+    ]
+}
